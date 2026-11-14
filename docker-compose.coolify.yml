@@ -99,10 +99,11 @@ services:
     # in diesem Branch disabled, da Forgejo nicht gestarte #
     # Forgejo ==> separate installtion                     #
     ########################################################
-  # ── Forgejo (Vault git remote + OAuth-Provider) ────────────────────────
+    
+  # # ── Forgejo (Vault git remote + OAuth-Provider) ────────────────────────
   # forgejo:
-    v15 = aktuelle LTS-Linie (v15.0.6, 2026-07-30); erhält Security-Fixes für
-    15 Monate. v16 wäre latest-stable, LTS ist für fremde Vault-Daten sicherer.
+    # # v15 = aktuelle LTS-Linie (v15.0.6, 2026-07-30); erhält Security-Fixes für
+    # # 15 Monate. v16 wäre latest-stable, LTS ist für fremde Vault-Daten sicherer.
     # image: codeberg.org/forgejo/forgejo:15
     # restart: unless-stopped
     # environment:
@@ -113,7 +114,7 @@ services:
     # volumes:
       # - forgejo-data:/data
     # healthcheck:
-      Forgejo-Image enthält wget (busybox) → /api/healthz prüfen.
+      # # Forgejo-Image enthält wget (busybox) → /api/healthz prüfen.
       # test: ["CMD-SHELL", "wget -qO- http://localhost:3000/api/healthz >/dev/null || exit 1"]
       # interval: 15s
       # timeout: 5s
